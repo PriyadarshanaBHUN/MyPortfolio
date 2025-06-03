@@ -1,0 +1,206 @@
+
+.home {
+  height: 100vh;
+  background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url('../../images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-position-y: top;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInHome 2s ease-in-out;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 90%;
+  height: 50%;
+  background: radial-gradient(circle at center, rgba(119, 255, 74, 0.15), transparent);
+  animation: rotateBackground 30s linear infinite;
+  z-index: 1;
+}
+
+@keyframes rotateBackground {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.home-content {
+  max-width: 850px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 1.5s ease, floatContent 6s ease-in-out infinite;
+  margin: 600px;
+  margin-left: -100px;
+  z-index: 2;
+  position: relative;
+}
+
+@keyframes floatContent {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.home h1 {
+  font-size: 1.9rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 80px;
+  animation: slideInTop 1.2s ease;
+}
+
+.home .name {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.2rem;
+  font-weight: 700px;
+  margin: 0.5rem 0;
+  animation: fadeInText 2s ease;
+}
+
+.home h2 {
+  font-size: 2rem;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+  animation: slideInBottom 1.4s ease;
+}
+
+.home p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  animation: fadeIn 2.2s ease;
+}
+
+.btn-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 36px;
+  background: transparent;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent));
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.btn-home:hover::before {
+  left: 0;
+}
+
+.btn-home:hover {
+  color: var(--bg-dark);
+  box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color);
+  transform: translateY(-2px);
+}
+
+@keyframes fadeInHome {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    letter-spacing: 5px;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: 1px;
+  }
+}
+
+@keyframes slideInBottom {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.social-sidebar-right {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 10;
+}
+
+.social-sidebar-right a {
+  color: var(--text-light);
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-sidebar-right a:hover {
+  color: var(--primary-color);
+  transform: scale(1.2);
+}

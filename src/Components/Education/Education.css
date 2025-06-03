@@ -1,0 +1,48 @@
+.education {
+  padding: auto 20px;
+  background: linear-gradient(135deg, var(--bg-light), var(--bg-dark));
+}
+
+.education-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.education h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+.education-card {
+  background: var(--glass-bg);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  color: var(--text-light);
+  box-shadow: 0 10px 25px var(--shadow);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeIn 1.2s ease;
+}
+.certification-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.certi-card {
+  background: var(--glass-bg);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  color: var(--text-light);
+  box-shadow: 0 10px 25px var(--shadow);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeIn 1.2s ease;
+}
+.certi-card:hover {
+  transform: matrix(1.05,0,0,1.05,0,0);
+
+}
+.education-card:hover {
+  transform: matrix(1.05,0,0,1.05,0,0);
+
+}

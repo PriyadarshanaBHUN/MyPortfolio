@@ -1,0 +1,29 @@
+.extras {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, var(--bg-medium), var(--bg-dark));
+}
+
+.extras-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.extras h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+.extras-card {
+  background: var(--glass-bg);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  color: var(--text-light);
+  box-shadow: 0 10px 25px var(--shadow);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeIn 1.2s ease;
+}
+.extras-card:hover{
+  transform: matrix(1.05,0,0,1.05,0,0);
+}
