@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Components/Home/Home';
@@ -17,27 +17,30 @@ import './App.css';
 import './styles/global.css';
 
 function App() {
+  const location = useLocation();
+
+  // Check if the current route is /education or /extras
+  const isCustomPage = location.pathname === '/education' || location.pathname === '/extras';
+
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Home />
-              <About />
-              <Skills />
-              <Projects />
-              <Experience />
-              <Contact />
-              <Footer />
-            </>
-          }
-        />
-        <Route path="/education" element={<Education />} />
-        <Route path="/extras" element={<Extras />} />
-      </Routes>
+      {isCustomPage ? (
+        <Routes>
+          <Route path="/education" element={<Education />} />
+          <Route path="/extras" element={<Extras />} />
+        </Routes>
+      ) : (
+        <>
+          <Home />
+          <About />
+          <Skills />
+          <Projects />
+          <Experience />
+          <Contact />
+          <Footer />
+        </>
+      )}
     </>
   );
 }

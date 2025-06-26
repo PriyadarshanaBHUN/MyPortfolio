@@ -15,10 +15,6 @@ const Experience = () => {
                   src={process.env.PUBLIC_URL + exp.logo}
                   alt={exp.name}
                   className="experience-logo"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = "https://via.placeholder.com/60";
-                  }}
                 />
                 <div>
                   <h3>{exp.Roll}</h3>
