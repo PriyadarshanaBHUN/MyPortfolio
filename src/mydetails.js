@@ -11,17 +11,45 @@ const myDetails = {
   Facebook: "https://www.facebook.com/udara.nuwan.73700",
   skills: {
     professional:["React", "Node.js", "MongoDB", "JavaScript", "CSS","HTML","Express.js","Git","GitHub","Tailwind CSS","Python","Java","C","C++","MySQL","Joomala","WordPress","Figma","Spring Boot","R"],
-    personal: ["problem-solving","teamwork","communication","adaptability","critical thinking","creativity"]},
+    personal: ["problem-solving","teamwork","communication","adaptability","critical thinking","creativity"],
+    Languages: ["English","Sinhala"]
+  },
+    
   projects: [
     {
       name: "Resturent Management System",
       description: "This is Our University 3rd year Group Project.",
-      link: "https://portfolio.johndoe.com"
+      link: "https://portfolio.johndoe.com",
+      image: "/images/projects/restaurant.png",
+      featured: true
     },
     {
       name: "E-commerce App",
       description: "A full-stack e-commerce app built with MERN stack.",
-      link: "https://shop.johndoe.com"
+      link: "https://shop.johndoe.com",
+      image: "/images/projects/e-commerce.png",
+      featured: true
+    },
+    {
+      name: "Move Ticket Bookiing Web app",
+      description: "A full-stack e-commerce app built with MERN stack.",
+      link: "https://shop.johndoe.com",
+      image: "/images/projects/move_ticket_booking.png",
+      featured: true
+    },
+    {
+      name: "Parking Managment System",
+      description: "A full-stack web app built with Matchine Learning.",
+      link: "https://shop.johndoe.com",
+      image: "/images/projects/Parking-Management-System.png",
+      featured: true
+    },
+    {
+      name: "SL Learning Platform",
+      description: "A full-stack web app built with Spring Boot.",
+      link: "https://shop.johndoe.com",
+      image: "/images/projects/e-learning.jpg",
+      featured: true
     }
   ],
   Experience: [
@@ -30,7 +58,7 @@ const myDetails = {
       Roll:"Manager",
       description: "Managed day-to-day operations and staff.Handled financial transactions, budgeting.",
       Time: "May 2022 - March 2025",
-      logo: "src/images/cafeweez.png"
+      image: "/images/experience/cafeweez.png"
       
     },
   {
@@ -38,7 +66,7 @@ const myDetails = {
       Roll:"Volunteer Web Developer",
       description: "Contributed to one web devolopment project using wordpress.",
       Time: "November 2023 - February 2024",
-      logo: "src/images/Moxata.webp"
+      image: "/images/experience/moxata.webp"
       
     }
   ],

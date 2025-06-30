@@ -12,7 +12,6 @@ const Skills = () => {
       <div className='Skills_container'>
         <h2>My Skills</h2>
 
-        {/* Toggle Buttons */}
         <div className="skills-toggle">
           <button
             className={activeTab === "professional" ? "active-tab" : ""}
@@ -26,9 +25,14 @@ const Skills = () => {
           >
             Personal
           </button>
+                    <button
+            className={activeTab === "Languages" ? "active-tab" : ""}
+            onClick={() => setActiveTab("Languages")}
+          >
+            Languages
+          </button>
         </div>
 
-        {/* Skills List */}
         <ul className="skills-list">
           {skillList.map((skill, index) => (
             <li key={index} className='skills-item'>

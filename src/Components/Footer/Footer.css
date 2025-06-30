@@ -1,46 +1,50 @@
 .footer {
-  background-color: #0f0f0f;
-  color: #cccccc;
-  padding: 40px 20px 40px;
+  background-color: var(--bg-medium);
+  color: var(--text-medium);
+  padding: 40px 20px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  border-top: 1px solid #1a1a1a;
+  border-top: 1px solid var(--bg-dark);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
 }
 
 .footer .title {
-  font-size: 1.5rem;
-  color: #ffffff;
+  font-size: 1.8rem;
+  color: var(--text-light);
   margin-bottom: 10px;
   font-weight: 600;
 }
 
 .footer .subtitle {
   font-size: 1rem;
-  color: #888888;
-  margin-bottom: 20px;
+  color: var(--text-medium);
+  margin-bottom: 25px;
 }
 
 .footer-socials {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   gap: 20px;
-  font-size: 1.5rem;
-  margin-bottom: 25px;
+  font-size: 1.6rem;
+  margin-bottom: 30px;
 }
 
 .footer-socials a {
-  color: #bbbbbb;
-  transition: color 0.3s ease, transform 0.3s ease;
+  color: var(--social-icon);
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .footer-socials a:hover {
-  color: #77ff4a;
-  transform: scale(1.2);
+  color: var(--primary-color);
+  transform: scale(1.25);
 }
 
 .footer-bottom {
+  font-size: 0.85rem;
+  color: var(--text-medium);
   margin-top: 30px;
-  font-size: 0.9rem;
-  color: #555;
- 
+  border-top: 1px solid var(--overlay-color);
+  padding-top: 20px;
 }

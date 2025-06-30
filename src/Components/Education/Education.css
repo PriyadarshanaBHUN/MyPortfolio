@@ -1,48 +1,71 @@
 .education {
-  padding: auto 20px;
-  background: linear-gradient(135deg, var(--bg-light), var(--bg-dark));
+  background-color: var(--bg-medium);
+  padding: 10rem 1rem;
+  color: var(--text-light);
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.education-container {
-  max-width: 800px;
-  margin: 0 auto;
+.education-container,
+.certification-container {
+  max-width: 900px;
+  margin: 0 auto 3rem;
 }
 
-.education h2 {
+.education-container h2,
+.certification-container h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
   text-align: center;
   color: var(--primary-color);
-  margin-bottom: 40px;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 0.5rem;
 }
 
-.education-card {
-  background: var(--glass-bg);
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  color: var(--text-light);
-  box-shadow: 0 10px 25px var(--shadow);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  animation: fadeIn 1.2s ease;
-}
-.certification-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
+.education-card,
 .certi-card {
-  background: var(--glass-bg);
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  color: var(--text-light);
-  box-shadow: 0 10px 25px var(--shadow);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  animation: fadeIn 1.2s ease;
+  background-color: var(--bg-light);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
+.education-card:hover,
 .certi-card:hover {
-  transform: matrix(1.05,0,0,1.05,0,0);
-
+  transform: translateY(-5px);
+  background-color: var(--glass-bg);
 }
-.education-card:hover {
-  transform: matrix(1.05,0,0,1.05,0,0);
 
+.education-card h3,
+.certi-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  color: var(--text-light);
+}
+
+.education-card p,
+.certi-card p {
+  margin: 0.2rem 0;
+  color: var(--text-medium);
+}
+
+@media screen and (max-width: 600px) {
+  .education-container h2,
+  .certification-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .education-card,
+  .certi-card {
+    padding: 1rem;
+  }
+
+  .education-card h3,
+  .certi-card h3 {
+    font-size: 1.1rem;
+  }
 }

@@ -1,51 +1,74 @@
 :root {
-  --primary-color: #77ff4a;
-  --secondary-color: #ffffff;
-  --bg-dark: #0d1117;
-  --bg-medium: #161b22;
-  --bg-light: #21262d;
-  --text-light: #f0f6fc;
-  --text-muted: #8b949e;
-  --accent: #58a6ff;
-  --shadow: rgba(0, 0, 0, 0.4);
-  --glass-bg: rgba(255, 255, 255, 0.05);
+ 
+  --bg-light: #ffffff;
+  --bg-medium: #f1f3f6;
+  --bg-dark: #dfe3e8;
+
+  --text-light: #1a1a1a;
+  --text-medium: #333333;
+
+  --primary-color: #0066cc;
+  --accent: #242750;
+
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --overlay-color: rgba(0, 0, 0, 0.05);
+
+  --shadow: rgba(0, 0, 0, 0.1);
+  --pointer-light: #0066cc38;
+  --social-icon: #222; 
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+[data-theme="dark"] {
+  --bg-light: #0e0e0e;
+  --bg-medium: #1a1a1a;
+  --bg-dark: #121212;
+
+  --text-light: #f9f9f9;
+  --text-medium: #cccccc;
+
+  --primary-color: #3fea06b5;
+  --accent: #366829c5;
+
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --overlay-color: rgba(255, 255, 255, 0.08);
+
+  --shadow: rgba(255, 255, 255, 0.05);
+  --pointer-light: #3fea0633;
+  --social-icon: #ffffff; 
 }
+
 
 body {
-  background-color: var(--bg-dark);
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
   color: var(--text-light);
-  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
 }
 
 a {
-  color: var(--accent);
+  color: var(--primary-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-a:hover {
-  color: var(--primary-color);
-}
 
-section {
-  padding: 80px 20px;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  border-radius: 12px;
-}
 
 button {
   font-family: inherit;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+::selection {
+  background-color: var(--primary-color);
+  color: #fff;
 }

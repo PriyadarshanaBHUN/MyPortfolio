@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './TypingLogo.css';
 
 const TypingLogo = () => {
-  const fullText = 'UDARA N PRIYADARSHAN';
+  const fullText = 'UDARA N PRIYADARSHANA';
   const [displayed, setDisplayed] = useState('');
   const [i, setI] = useState(0);
 

@@ -1,13 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import TypingLogo from './TypingLogo';
+import { FaSun, FaMoon } from 'react-icons/fa';
 
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
 
-  
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
   useEffect(() => {
     const hash = location.hash;
     if (hash) {
@@ -16,7 +22,7 @@ const Navbar = () => {
       if (el) {
         setTimeout(() => {
           el.scrollIntoView({ behavior: 'smooth' });
-        }, 100); 
+        }, 100);
       }
     }
   }, [location]);
@@ -30,10 +36,14 @@ const Navbar = () => {
     }
   };
 
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <button onClick={() => handleNavClick('home')} className="logo-link" style={{ background: 'none', border: 'none' }}>
+        <button onClick={() => handleNavClick('home')} className="logo-link">
           <TypingLogo />
         </button>
         <ul className="nav-links">
@@ -44,6 +54,9 @@ const Navbar = () => {
           <li><button onClick={() => handleNavClick('experience')}>Experience</button></li>
           <li><button onClick={() => handleNavClick('contact')}>Contact</button></li>
         </ul>
+        <button className="theme-toggle-btn" onClick={toggleTheme}>
+          {theme === 'dark' ? <FaSun size={24} /> : <FaMoon size={24} />}
+        </button>
       </div>
     </nav>
   );

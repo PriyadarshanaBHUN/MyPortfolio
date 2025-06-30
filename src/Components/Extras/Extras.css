@@ -1,29 +1,60 @@
 .extras {
   padding: 100px 20px;
   background: linear-gradient(135deg, var(--bg-medium), var(--bg-dark));
+  color: var(--text-light);
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 .extras-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .extras h2 {
   text-align: center;
   color: var(--primary-color);
+  font-size: 2.0rem;
   margin-bottom: 40px;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 10px;
 }
 
 .extras-card {
   background: var(--glass-bg);
-  padding: 20px;
+  padding: 25px 20px;
   border-radius: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   color: var(--text-light);
-  box-shadow: 0 10px 25px var(--shadow);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  animation: fadeIn 1.2s ease;
+  box-shadow: 0 8px 24px var(--shadow);
+  border-left: 4px solid var(--accent);
+  backdrop-filter: blur(8px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+  animation: fadeIn 1s ease both;
 }
-.extras-card:hover{
-  transform: matrix(1.05,0,0,1.05,0,0);
+
+.extras-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px var(--shadow);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .extras h2 {
+    font-size: 1.6rem;
+  }
+
+  .extras-card {
+    padding: 20px 16px;
+  }
 }

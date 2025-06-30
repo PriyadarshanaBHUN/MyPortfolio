@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import profileImage from '../../images/profile_logo.jpg'; 
+import profileImage from '../../images/profile.png';
 import myDetails from '../../mydetails';
 import { Link } from 'react-router-dom';
 
@@ -28,8 +28,11 @@ const About = () => {
           <p>
             As I near the end of my undergraduate life, I see this not as a conclusion, but as the beginning of a lifelong journey in technology. I'm excited to continue learning, growing, and making a meaningful impact in the world of IT.
           </p>
+
           <div className="about-buttons">
-            <a href="#projects" className="about-btn">View My Projects</a>
+             <Link to="/more-projects">
+              <button className="btn">My Projects</button>
+            </Link>           
             <Link to="/education">
               <button className="btn">Education</button>
             </Link>
@@ -44,3 +47,4 @@ const About = () => {
 };
 
 export default About;
+
