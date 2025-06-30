@@ -66,7 +66,7 @@ const myDetails = {
       Roll:"Volunteer Web Developer",
       description: "Contributed to one web devolopment project using wordpress.",
       Time: "November 2023 - February 2024",
-      image: "/images/experience/moxata.webp"
+      image: "/images/experience/moxata.png"
       
     }
   ],
