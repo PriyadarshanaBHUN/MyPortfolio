@@ -1,25 +1,49 @@
 .typing-logo-wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 120px;
-  background: transparent;
+  height: 52px;
+  overflow: hidden;
+  padding-left: 4px;
 }
 
 .typing-logo-text {
-  font-size: 1.2rem;
+  font-family: 'Fira Mono', 'Courier New', Courier, monospace;
+  font-size: 1.6rem;
   font-weight: 700;
-  font-family:'Cinzel Decorative';
-  color: var(--text-muted, #00ffd5);
-  letter-spacing: 2px;
+  color: var(--primary-color, #0066cc);
   white-space: nowrap;
-  overflow: hidden;
-  opacity: 0;
-  animation: fadeIn 1.5s ease-in-out forwards;
+  letter-spacing: 2.5px;
+  user-select: none;
+  animation: fadeIn 0.7s cubic-bezier(0.4,0,0.2,1);
+  text-shadow: 0 2px 8px var(--shadow, rgba(0,0,0,0.08));
+  transition: color 0.3s;
+}
+
+[data-theme="dark"] .typing-logo-text {
+  color: var(--primary-color, #3fea06b5);
+  text-shadow: 0 2px 8px var(--pointer-light, #3fea0633);
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  color: var(--primary-color, #0066cc);
+  font-weight: 400;
+  font-size: 1.6rem;
+  animation: blink 1s steps(2, start) infinite;
+  transition: color 0.3s;
+}
+
+[data-theme="dark"] .cursor {
+  color: var(--primary-color, #3fea06b5);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

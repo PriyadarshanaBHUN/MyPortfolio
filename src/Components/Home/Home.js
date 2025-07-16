@@ -30,7 +30,7 @@ const Home = () => {
           <h2>{myDetails.title}</h2>
           <p>I design and build beautiful web experiences using modern technologies.</p>
           <a
-            href="https://drive.google.com/file/d/1vdJGMosEZLAfTxkMMgqr4rktooYX_0Yt/view?usp=sharing"
+            href="https://drive.google.com/file/d/1_i8ApBy7JfmQStvk6Ku2dkvl91qFj9tA/view?usp=sharing"
             className="btn-home"
             target="_blank"
             rel="noopener noreferrer"

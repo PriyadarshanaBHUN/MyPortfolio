@@ -18,33 +18,32 @@ import ScrollToTop from './ScrollToTop';
 import './App.css';
 import './styles/global.css';
 
+function MainContent() {
+  return (
+    <>
+      <Home />
+      <About />
+      <Skills />
+      <Projects />
+      <Experience />
+      <Contact />
+      <Footer />
+    </>
+  );
+}
+
 function App() {
-  const location = useLocation();
-
-  
-  const isCustomPage = location.pathname === '/education' || location.pathname === '/extras' || location.pathname === '/more-projects';
-
   return (
     <>
       <ScrollToTop />
       <Navbar />
-      {isCustomPage ? (
-        <Routes>
-          <Route path="/education" element={<Education />} />
-          <Route path="/extras" element={<Extras />} />
-          <Route path="/more-projects" element={<MoreProjects />} />
-        </Routes>
-      ) : (
-        <>
-          <Home />
-          <About />
-          <Skills />
-          <Projects />
-          <Experience />
-          <Contact />
-          <Footer />
-        </>
-      )}
+      <Routes>
+        <Route path="/" element={<MainContent />} />
+        <Route path="/education" element={<Education />} />
+        <Route path="/extras" element={<Extras />} />
+        <Route path="/more-projects" element={<MoreProjects />} />
+
+      </Routes>
     </>
   );
 }

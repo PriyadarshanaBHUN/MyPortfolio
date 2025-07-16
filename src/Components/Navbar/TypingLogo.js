@@ -1,24 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import './TypingLogo.css';
 
-const TypingLogo = () => {
-  const fullText = 'UDARA N PRIYADARSHANA';
+const TypingLogo = ({ mode = 'full' }) => {
+  const fullText = 'U N PRIYADARSHANA.';
+  const shortText = 'PRIYADARSHANA.';
+  const text = mode === 'short' ? shortText : fullText;
+
   const [displayed, setDisplayed] = useState('');
   const [i, setI] = useState(0);
 
   useEffect(() => {
-    if (i < fullText.length) {
+    setDisplayed('');
+    setI(0);
+  }, [text]);
+
+  useEffect(() => {
+    if (i < text.length) {
       const timer = setTimeout(() => {
-        setDisplayed(prev => prev + fullText[i]);
+        setDisplayed(prev => prev + text[i]);
         setI(prev => prev + 1);
       }, 100);
       return () => clearTimeout(timer);
     }
-  }, [i, fullText]);
+  }, [i, text]);
 
   return (
     <div className="typing-logo-wrapper">
-      <h1 className="typing-logo-text">{displayed}</h1>
+      <h1 className="typing-logo-text">{displayed}<span className="cursor">|</span></h1>
     </div>
   );
 };
