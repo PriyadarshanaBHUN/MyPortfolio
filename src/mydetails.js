@@ -24,16 +24,16 @@ const myDetails = {
       featured: true
     },
     {
-      name: "E-commerce App",
+      name: "SL Shopping mall",
       description: "A full-stack e-commerce app built with MERN stack.",
-      link: "https://shop.johndoe.com",
+      link: "https://slshoppingMall.com",
       image: "/images/projects/e-commerce.png",
       featured: true
     },
     {
       name: "Move Ticket Bookiing Web app",
-      description: "A full-stack e-commerce app built with MERN stack.",
-      link: "https://shop.johndoe.com",
+      description: "A full-stack web app built with  Spring boot.",
+      link: "https://Ticket_booking.com",
       image: "/images/projects/move_ticket_booking.png",
       featured: true
     },

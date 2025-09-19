@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Components/Home/Home';
@@ -37,12 +37,18 @@ function App() {
     <>
       <ScrollToTop />
       <Navbar />
+      <Home />
+       <About />
+      <Skills />
+      <Projects />
+      <Experience />
+      <Contact />
+      <Footer />
       <Routes>
         <Route path="/" element={<MainContent />} />
         <Route path="/education" element={<Education />} />
         <Route path="/extras" element={<Extras />} />
         <Route path="/more-projects" element={<MoreProjects />} />
-
       </Routes>
     </>
   );
