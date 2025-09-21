@@ -9,6 +9,7 @@ const myDetails = {
   github: "https://github.com/PriyadarshanaBHUN",
   linkedin: "https://linkedin.com/in/priyadarshana-b-h-u-n-60b5a5219",
   Facebook: "https://www.facebook.com/udara.nuwan.73700",
+  Twitter: "https://x.com/Udara_NP",
   skills: {
     professional:["React", "Node.js", "MongoDB", "JavaScript", "CSS","HTML","Express.js","Git","GitHub","Tailwind CSS","Python","Java","C","C++","MySQL","Joomala","WordPress","Figma","Spring Boot","R"],
     personal: ["problem-solving","teamwork","communication","adaptability","critical thinking","creativity"],

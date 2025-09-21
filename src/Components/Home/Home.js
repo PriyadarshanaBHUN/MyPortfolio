@@ -45,7 +45,7 @@ const Home = () => {
         <a href={myDetails.linkedin} target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
         <a href={myDetails.github} target="_blank" rel="noopener noreferrer"><FaGithub /></a>
         <a href={`mailto:${myDetails.email}`} target="_blank" rel="noopener noreferrer"><SiGmail /></a>
-        <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+        <a href={myDetails.Twitter} target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
       </div>
     </section>
   );
